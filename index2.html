@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Фільтр карточок за допомогою JavaScript</title>
+  </head>
+  <body>
+    <h2>Пошук</h2>
+
+    <div class="filters-container">
+      <div class="filter-group">
+        <h3>Тип кузова:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="sedan" /> Седан</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="hatchback" />
+          Хетчбек</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="suv" />
+          Позашляховик</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Марка авто:</h3>
+        <label><input type="checkbox" class="filter" value="bmw" /> BMW</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="toyota" /> Toyota</label
+        ><br />
+        <label><input type="checkbox" class="filter" value="audi" /> Audi</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Країна виробник:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="germany" />
+          Німеччина</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="japan" /> Японія</label
+        ><br />
+        <label><input type="checkbox" class="filter" value="usa" /> США</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Ціна (від і до):</h3>
+        <label
+          >Від: <input type="number" class="filter" id="price-from" /></label
+        ><br />
+        <label>До: <input type="number" class="filter" id="price-to" /></label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Рік випуску (від і до):</h3>
+        <label>Від: <input type="number" class="filter" id="year-from" /></label
+        ><br />
+        <label>До: <input type="number" class="filter" id="year-to" /></label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Стан:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="damaged" /> Битий</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="credit" /> У
+          кредиті</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="unregistered" />
+          Нерозмитнена</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Тип палива:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="petrol" /> Бензин</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="diesel" /> Дизель</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="hybrid" /> Гібрид</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Тип коробки передач:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="manual" />
+          Механіка</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="automatic" />
+          Автомат</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Колір:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="black" /> Чорний</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="white" /> Білий</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="silver" />
+          Сріблястий</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="red" /> Червоний</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="blue" /> Синій</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="green" /> Зелений</label
+        ><br />
+      </div>
+
+      <div class="filter-group">
+        <h3>Комфорт:</h3>
+        <label
+          ><input type="checkbox" class="filter" value="sunroof" /> Люк</label
+        ><br />
+        <label
+          ><input type="checkbox" class="filter" value="leather" /> Шкіряний
+          салон</label
+        ><br />
+      </div>
+    </div>
+
+    <div class="cards-container">
+      <div class="card sedan bmw germany diesel automatic black">
+        Седан, BMW, Німеччина, Дизель, Автомат, Чорний
+        <img src="загружено.jpg" style="width: 200px" />
+      </div>
+      <div class="card hatchback toyota japan petrol manual white">
+        Хетчбек, Toyota, Японія, Бензин, Механіка, Білий
+        <img
+          src="compact-sports-car-family-sedan-3d-illustration_101266-24772.avif"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card suv audi usa hybrid automatic silver">
+        Позашляховик, Audi, США, Гібрид, Автомат, Сріблястий
+        <img
+          src="png-transparent-silver-mercedes-benz-sedan-mercedes-benz-car-car-compact-car-sedan-car.png"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card sedan bmw germany diesel automatic black sunroof">
+        Седан, BMW, Німеччина, Дизель, Автомат, Чорний, Люк
+        <img src="загружено.jpg" style="width: 200px" />
+      </div>
+      <div class="card hatchback toyota japan petrol manual white leather">
+        Хетчбек, Toyota, Японія, Бензин, Механіка, Білий, Шкіряний салон
+        <img
+          src="compact-sports-car-family-sedan-3d-illustration_101266-24772.avif"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card suv audi usa hybrid automatic silver sunroof">
+        Позашляховик, Audi, США, Гібрид, Автомат, Сріблястий, Люк
+        <img
+          src="png-transparent-silver-mercedes-benz-sedan-mercedes-benz-car-car-compact-car-sedan-car.png"
+          style="width: 200px"
+        />
+      </div>
+      <div
+        class="card sedan bmw germany diesel automatic black sunroof damaged"
+      >
+        Седан, BMW, Німеччина, Дизель, Автомат, Чорний, Люк, Битий
+        <img src="загружено.jpg" style="width: 200px" />
+      </div>
+      <div
+        class="card hatchback toyota japan petrol manual white leather credit"
+      >
+        Хетчбек, Toyota, Японія, Бензин, Механіка, Білий, Шкіряний салон, У
+        кредиті
+        <img
+          src="compact-sports-car-family-sedan-3d-illustration_101266-24772.avif"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card suv audi germany diesel automatic black sunroof damaged">
+        Позашляховик, Audi, Німеччина, Дизель, Автомат, Чорний, Люк, Битий
+        <img src="загружено.jpg" style="width: 200px" />
+      </div>
+      <div
+        class="card sedan toyota japan petrol automatic white leather credit"
+      >
+        Седан, Toyota, Японія, Бензин, Автомат, Білий, Шкіряний салон, У кредиті
+        <img
+          src="compact-sports-car-family-sedan-3d-illustration_101266-24772.avif"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card hatchback bmw germany petrol manual silver damaged">
+        Хетчбек, BMW, Німеччина, Бензин, Механіка, Сріблястий, Битий
+        <img
+          src="png-transparent-silver-mercedes-benz-sedan-mercedes-benz-car-car-compact-car-sedan-car.png"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card suv mercedes germany diesel automatic black leather">
+        Позашляховик, Mercedes, Німеччина, Дизель, Автомат, Чорний, Шкіряний
+        салон
+        <img src="загружено.jpg" style="width: 200px" />
+      </div>
+      <div class="card sedan audi germany petrol automatic white sunroof">
+        Седан, Audi, Німеччина, Бензин, Автомат, Білий, Люк
+        <img
+          src="compact-sports-car-family-sedan-3d-illustration_101266-24772.avif"
+          style="width: 200px"
+        />
+      </div>
+      <div
+        class="card hatchback volkswagen germany diesel manual black damaged"
+      >
+        Хетчбек, Volkswagen, Німеччина, Дизель, Механіка, Чорний, Битий
+        <img src="загружено.jpg" style="width: 200px" />
+      </div>
+      <div class="card suv honda japan petrol automatic silver leather credit">
+        Позашляховик, Honda, Японія, Бензин, Автомат, Сріблястий, Шкіряний
+        салон, У кредиті
+        <img
+          src="png-transparent-silver-mercedes-benz-sedan-mercedes-benz-car-car-compact-car-sedan-car.png"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card sedan ford usa petrol automatic red damaged">
+        Седан, Ford, США, Бензин, Автомат, Червоний, Битий
+        <img
+          src="depositphotos_83378584-stock-photo-modern-compact-red-car-front.jpg"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card hatchback nissan japan petrol manual blue">
+        Хетчбек, Nissan, Японія, Бензин, Механіка, Синій
+        <img
+          src="depositphotos_176520768-stock-photo-dark-cerulean-blue-super-sports.jpg"
+          style="width: 200px"
+        />
+      </div>
+      <div class="card suv subaru japan petrol automatic green leather">
+        Позашляховик, Subaru, Японія, Бензин, Автомат, Зелений, Шкіряний салон
+        <img
+          src="depositphotos_52468909-stock-photo-green-car.jpg"
+          style="width: 200px"
+        />
+      </div>
+    </div>
+
+    <script>
+      var cards = document.querySelectorAll(".card");
+
+      var checkboxes = document.querySelectorAll(".filter");
+
+      checkboxes.forEach(function (checkbox) {
+        checkbox.addEventListener("change", function () {
+          cards.forEach(function (card) {
+            if (card.classList.contains(checkbox.value)) {
+              card.style.display = checkbox.checked ? "inline-block" : "none";
+            }
+          });
+        });
+      });
+
+      document.querySelector(".filters-container").style.display = "flex";
+    </script>
+  </body>
+</html>

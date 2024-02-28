@@ -1,0 +1,33 @@
+/* Стилі для контейнера параметрів */
+.filters-container {
+  display: none; /* Початково контейнери параметрів приховані */
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start; /* Вирівнювання по верхньому краю */
+  margin-bottom: 20px; /* Відстань від карток */
+}
+
+/* Стилі для кожного блоку параметрів */
+.filter-group {
+  margin-bottom: 10px; /* Відстань між групами параметрів */
+}
+
+/* Стилі для кожного чекбоксу */
+.filter {
+  margin-right: 5px;
+}
+
+/* Стилі для блоків */
+.card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid #000;
+  border-radius: 10px;
+  margin: 10px;
+  display: inline-block; /* Розміщення карточок в рядок */
+}
+
+/* Стилі для контейнера карток */
+.cards-container {
+  text-align: center; /* Вирівнювання по центру горизонталі */
+}
